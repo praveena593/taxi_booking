@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Initialize the database and create the bookings table if it doesn't exist
 def init_db():
-    conn = sqlite3.connect(':memory:')  # Connect to the database
+    conn = sqlite3.connect('taxi_bookings.db')  # Connect to the database
     cursor = conn.cursor()
     # Create table with 'name' field along with other details
     cursor.execute('''
